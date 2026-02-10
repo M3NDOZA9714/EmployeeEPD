@@ -49,7 +49,7 @@ export class EmpleadoModel extends Model<
 
 EmpleadoModel.init(
   {
-    id: { type: DataTypes.UUIDV4, primaryKey: true, defaultValue: sql.uuidV4 },
+    id: { type: DataTypes.UUID, primaryKey: true, defaultValue: sql.uuidV4 },
     nombreColaborador: { type: DataTypes.STRING },
     fechaNacimiento: { type: DataTypes.DATE },
     dni: { type: DataTypes.STRING },

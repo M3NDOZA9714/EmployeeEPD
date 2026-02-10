@@ -19,7 +19,7 @@ export class DocumentoModel extends Model<
 
 DocumentoModel.init(
   {
-    id: { type: DataTypes.UUIDV4, primaryKey: true, defaultValue: sql.uuidV4 },
+    id: { type: DataTypes.UUID, primaryKey: true, defaultValue: sql.uuidV4 },
     nombre: { type: DataTypes.STRING },
     tipo: { type: DataTypes.INTEGER },
   },

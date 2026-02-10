@@ -19,7 +19,7 @@ export class DocumentoXEmpleadoModel extends Model<
 
 DocumentoXEmpleadoModel.init(
   {
-    id: { type: DataTypes.UUIDV4, primaryKey: true, defaultValue: sql.uuidV4 },
+    id: { type: DataTypes.UUID, primaryKey: true, defaultValue: sql.uuidV4 },
     idEmpleado: { type: DataTypes.STRING },
     idDocumento: { type: DataTypes.STRING },
   },
