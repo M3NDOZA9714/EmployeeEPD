@@ -8,6 +8,7 @@ import {
 } from "@sequelize/core";
 import { sequelize } from "@database/index";
 import { EmpleadoModel } from "./empleado.model";
+import { DocumentoModel } from "./documento.model";
 
 export class DocumentoXEmpleadoModel extends Model<
   InferAttributes<DocumentoXEmpleadoModel>,
@@ -28,7 +29,13 @@ DocumentoXEmpleadoModel.init(
         key: "id",
       },
     },
-    idDocumento: { type: DataTypes.STRING },
+    idDocumento: {
+      type: DataTypes.STRING,
+      references: {
+        model: DocumentoModel,
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
