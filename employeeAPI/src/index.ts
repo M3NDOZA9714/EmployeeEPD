@@ -21,7 +21,7 @@ class Server {
     this.app.set("port", process.env.PORT ?? 3000);
     this.app.use(morgan("dev"));
     this.app.use(cookieParser());
-    this.app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+    this.app.use(cors({ credentials: true, origin: 'http://89.167.20.163:3002' }));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
   }
