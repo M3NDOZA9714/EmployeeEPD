@@ -23,14 +23,16 @@ DocumentoXEmpleadoModel.init(
   {
     id: { type: DataTypes.UUID, primaryKey: true, defaultValue: sql.uuidV4 },
     idEmpleado: {
-      type: DataTypes.STRING,
+      type: DataTypes.UUID,
+      allowNull: false,
       references: {
         model: EmpleadoModel,
         key: "id",
       },
     },
     idDocumento: {
-      type: DataTypes.STRING,
+      type: DataTypes.UUID,
+      allowNull: false,
       references: {
         model: DocumentoModel,
         key: "id",
