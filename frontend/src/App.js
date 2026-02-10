@@ -462,7 +462,7 @@ const EmployeeDatabase = () => {
               <a
                 className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 cursor-pointer flex items-center space-x-2 gap-2"
                 rel="noreferrer"
-                href="/Plantilla empleados.xlsx">
+                href="/PlantillaEmpleados.xlsx">
                 Descargar Plantilla
                 <SheetIcon className="h-4 w-4" />
               </a>
