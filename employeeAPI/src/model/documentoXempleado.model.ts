@@ -7,6 +7,7 @@ import {
   sql,
 } from "@sequelize/core";
 import { sequelize } from "@database/index";
+import { EmpleadoModel } from "./empleado.model";
 
 export class DocumentoXEmpleadoModel extends Model<
   InferAttributes<DocumentoXEmpleadoModel>,
@@ -20,7 +21,13 @@ export class DocumentoXEmpleadoModel extends Model<
 DocumentoXEmpleadoModel.init(
   {
     id: { type: DataTypes.UUID, primaryKey: true, defaultValue: sql.uuidV4 },
-    idEmpleado: { type: DataTypes.STRING },
+    idEmpleado: {
+      type: DataTypes.STRING,
+      references: {
+        model: EmpleadoModel,
+        key: "id",
+      },
+    },
     idDocumento: { type: DataTypes.STRING },
   },
   {
@@ -28,5 +35,5 @@ DocumentoXEmpleadoModel.init(
     modelName: "DocumentoXEmpleado",
     tableName: "documentoxempleado",
     timestamps: false,
-  }
+  },
 );
